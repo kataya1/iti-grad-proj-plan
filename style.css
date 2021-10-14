@@ -1,0 +1,196 @@
+:root{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+*{
+    box-sizing: inherit;
+}
+/* *, *::after,*::before{
+    margin: 0;
+    padding: 0;
+} */
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgb(186, 174, 238) 8%, rgba(148,187,233,1) 100%);
+
+}
+main{
+    padding: 5vw 0;
+    max-width: 900px;
+    background-color: white;
+}
+    section{
+        padding: 1.5em 5vw;
+        /* background-image: linear-gradient(to bottom, #ffffff, #eeeeee); */
+        box-shadow: 2px 0px 5px  #323232cc;
+    }
+        section h2{
+            margin-top: 2em;
+        }
+
+    code{
+        font-family: monospace;
+    }
+    table{
+        width: 100%;
+        text-align: center;
+    }
+        thead tr{
+            background-color: #323232;
+            color: white;
+            position: sticky;
+            top:0
+        }
+        table tr:nth-child(even) {
+            background-color: #e5e5e5;
+        }
+        td:not(:first-child){
+            /* padding: 1rem; */
+            /* height: 3rem; */
+            background-color: hotpink;
+            padding: 0.5rem 0;
+            border: 1px solid black;
+            /* border-radius: 10% / 50%; */
+        }
+aside{
+    padding: 1em;
+}
+    
+    nav{
+
+        margin-top: 5rem;
+        padding: 1em 2em 2em 1em;
+        position: sticky;
+        top: 2rem;
+        background-color: whitesmoke;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+        
+        margin: 0;
+        padding-left: 0.5em;
+        list-style-type: none;
+        border-left: 1px solid gray;
+    }
+    nav ul a{
+        text-decoration: none;
+        color: royalblue;  
+    }
+    nav ul a:hover{
+        text-decoration: underline;
+    }
+    nav  i{
+        display: none;
+        cursor: pointer;
+    }
+    nav i:hover{
+        background-color: #e5e5e5;
+    }
+    nav i:active{
+        background-color: #323232;
+        color: #e5e5e5;
+    }
+
+@media (max-width: 746px) {
+
+    body{
+        padding: 0;
+        flex-direction: column;
+    }
+    
+    main{
+        max-width: 100%;
+        background: radial-gradient(circle, rgb(186, 174, 238) 8%, rgba(148,187,233,1) 100%);
+
+    }
+        section{
+            background-color: white;
+            margin: 1em 0 ;
+        }
+    aside{
+        position: sticky;
+        bottom: 0;
+        padding: 0;
+        background-color: #e5e5e5;
+
+    }
+        nav{
+            /* height: 3rem; */
+            margin: 0;
+            padding:0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+            nav ul{
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                bottom: 100%;
+                right: 0;
+
+                min-width: 10rem;
+                border: 0;
+                padding-left: 0;
+                background-color: #e5e5e5dd;
+                gap: 0.2em;
+                text-align: center;
+                
+                transition: 0.3s;
+                transform: translateY(-1.4em)
+            }
+                nav ul li a{
+                    display: block;
+                    padding: 1.2em;
+                }
+                nav ul li:not(:last-child){
+                    border-bottom: 1px solid gray;
+
+                }
+
+            nav i{
+                display: block;
+                padding: 1em;
+            }
+            /* nav  i:hover ~ ul, nav ul:hover{
+                visibility: visible;
+                position: relative;
+            } */
+        
+}
+.links-visible{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+@media print{
+    body{
+        padding: 0;
+        background-image: none;
+        background-color: white;
+        flex-direction: column;
+    }
+    main{
+        max-width: 100%;
+    }
+    aside{
+        display: none;
+    }
+}
+
