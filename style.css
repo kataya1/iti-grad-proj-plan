@@ -17,7 +17,6 @@ html{
 
 body{
     display: flex;
-    gap: 1em;
     justify-content: center;
     padding: 30px 0;
     margin: 0;
@@ -28,12 +27,13 @@ body{
 main{
     padding: 5vw 0;
     max-width: 900px;
-    background-color: white;
 }
-    section{
+section{
+        background-color: white;
         padding: 1.5em 5vw;
         /* background-image: linear-gradient(to bottom, #ffffff, #eeeeee); */
-        box-shadow: 2px 0px 5px  #323232cc;
+        box-shadow: 3px 2px 5px 3px #32323255;
+
     }
         section h2{
             margin-top: 2em;
@@ -74,6 +74,7 @@ aside{
         position: sticky;
         top: 2rem;
         background-color: whitesmoke;
+        box-shadow: 3px 2px 5px 3px #32323255;
     }
 
     nav ul{
@@ -110,17 +111,20 @@ aside{
     body{
         padding: 0;
         flex-direction: column;
+        background: radial-gradient(circle, rgb(186, 174, 238) 8%, rgba(148,187,233,1) 100%);
     }
     
     main{
         max-width: 100%;
-        background: radial-gradient(circle, rgb(186, 174, 238) 8%, rgba(148,187,233,1) 100%);
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0;
 
     }
-        section{
-            background-color: white;
+        /* section{
             margin: 1em 0 ;
-        }
+        } */
     aside{
         position: sticky;
         bottom: 0;
