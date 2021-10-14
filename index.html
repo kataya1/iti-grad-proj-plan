@@ -15,6 +15,11 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script src="script.js" defer></script>
+    <style>
+        .ml {
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,42 +28,65 @@
         <section>
             <p>
                 Hello guys this is a rough sketch for the project plan please pardon my spelling mistakes<br></p>
-            <h3>Todo</h3>
-            <ul>
-                <li>table</li>
-                <li>git commands</li>
-            </ul>
+
+            <div style="display: flex;">
+                <div class="ml">
+                    <h3>Todo</h3>
+                    <ul>
+                        <li>schedual</li>
+                        <li>git commands</li>
+                    </ul>
+                </div>
+                <div class="ml">
+                    <h3>New</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <section>
             <h2>goals:</h2>
             <ol>
-                <li>we're in a full-stack start track<br> that means we should be comfortable with every part
-                    frontend/backend,<br>
-                    that means we shouldn't have anyone work on only one aspect of the project or not work at all, so
-                    that
-                    we
-                    can be fair to all</li>
+                <li>we're in a full-stack development track<br> that means we should be comfortable with each part
+                    of a web project frontend/backend,<br>
+                    that means we shouldn't devide the workload where one person work on only one aspect of the project
+                </li>
                 <br>
                 <li>we should learn from doing this final project rather than feel it's a chore and hinderance to our
-                    learning</li>
+                    learning</li><br>
+                <li>
+                    load balance between idividual interest of wanting to work on this poject and other things
+                </li>
+
             </ol>
         </section>
         <section>
-            <h2>what's the plan</h2>
-            we should ask about this but i think we'll have enough time for the project it's probably gonna be a 2-3
-            week
-            project.
-            maybe it's after the scholorship or maybe not
-
-            <h2>what can we do now</h2>
+            <h2>Project expectation</h2>
+            we should ask about this it's probably gonna be a 2-3
+            week project.
+            <h2>What can we do now</h2>
             <p>
-                nothing really
-                <br>only the schema maybe<br>
-                but we need to take react and django first befre we do anything
+            <ul>
+                <li>The schema (database is gonna be build using python's ORM)</li><br>
+                <li>Use bootstrap(if someone wanna use it) for pages like Settings, About, Login </li><br>
+            </ul>
+
+
+            but we need to take react and django first before we can do the main things
             </p>
         </section>
         <section>
-            <h2>how are we gonna work?</h2>
+            <h2>How are we gonna work?</h2>
+            <h3>Froject</h3>
+            Any project can be devided into tasks. Watch this <a href="https://youtu.be/Qvmp4F-hOKA">Video</a> to get an
+            idea.
+            <h3>aranging work loads</h3>
+            I had my own idea abouts work loads but decided to scrap it in favor of getting team input. we're gonna
+            discuss in the meeting how to arange work loads, team composition.<br>
+            checkout the repo on github and commented lines if you're intersted
+            <h3>project parts</h3>
             the project is divided into M.V.C. what's that?
             <ul>
                 <li>Model - Concerned with the database (postgres, django database library)</li>
@@ -66,6 +94,7 @@
                 <li>Control - concerned with the backend (python, django)</li>
                 <small>in django it's separated into something different i think MVT but it's three nonetheless</small>
             </ul>
+            <!-- 
             <p>
                 we're gonna work in 3 groups of 2 <br>
                 each group will work on one aspect of the project each day
@@ -84,18 +113,19 @@
                 <li> like this <a href="https://code.visualstudio.com/learn/collaboration/live-share">link</a> watch the
                     video and check out the extension</li>
             </ul>
-            <hr><br>
-            there will be 4 branches.
+            <hr><br>-->
+            <h3>branches</h3>
+            there will be 4 primary branches.
             <ul>
                 <li>main</li>
                 <li>model</li>
                 <li>view</li>
                 <li>control</li>
             </ul>
-            <hr>
+
         </section>
         <section id='commands'>
-            <h2>pre-starting</h2>
+            <h2>getting started</h2>
             you can play with this repo as much as you want try all different git commands and do branching, pull
             requests and so on <br>
             usefull commands
@@ -105,13 +135,40 @@ git log --graph
 git remote -v
 git branch -av
 </code></pre>
-        </section>
-        <section>
-            <h2 >getting started</h2>
+            <h4>getting the remote repo on pc</h4>
+            cloning doesn't download every branch. just the main 
+            <pre><code>git clone repo_link</code></pre>
+
+            <h4>making a local branch from a remote branch (need verifying)</h4>
+            use this command before or after steps so you can see progress
+            <pre><code>git branch -av</code></pre>
+
+            update the local list of remote branches
+            <pre><code>git remote update origin --prune</code></pre>
+
+            creating branch
+            <pre><code>git branch new_local_branch_name</code></pre>
+
+            switching to branch
+            <pre><code>git switch new_local_branch_name</code></pre>
+            
+            check if there is a remote(should be there)
+            <pre><code>git remote -v</code></pre>
+
+            if no remote exists add remote
+            <pre><code>git remote add origin remote_link</code></pre>
+
+            pulling remote branch (origin is the remote repo alias)
+            <pre><code>git fetch origin</code></pre>
+
+            
+
+
 
         </section>
+
         <section>
-            <h3>steps</h3>
+            <h2>Work day steps</h2>
 
             <ul>
                 <li>each group will pull the assigned branch on that day (git pull [branch])</li>
@@ -119,19 +176,18 @@ git branch -av
                 <pre class=""><code>$ git pull origin branch_main</code></pre>
 
                 <li>switch to it (git switch/branch) </li>
-                <li>and work on it make commits(git commit)</li>
-                <li> if you make more than one commit, clean commits (git rebase -i HEAD~n <a
+                <li>work on it make commits(git commit)</li>
+                <li>if you make more than one commit, clean commits (git rebase -i HEAD~n <a
                         href="https://youtu.be/DLadleLj0ic">explenation</a> be careful not to delete your work (TELL
                     OTHER
                     TEAMMATES BEFORE USE))</li>
             </ul>
-
-
+            <!-- 
             the groups will be shuffled each working day, why? so that we get to work with more people, learn & get
             exposed
-            to coding techniques from each person.
+            to coding techniques from each person. -->
         </section>
-        <section id='tables'>
+        <!-- <section id='tables'>
             <h2>Schedual</h2>
             <table>
                 <caption>SCHEDULE</caption>
@@ -144,8 +200,8 @@ git branch -av
                     </tr>
                 </thead>
                 <!-- todo name coloration to find your name easier -->
-                <!-- don't switch name from first to second position so that it's easier to find **nvm it needs to switch anyway -->
-                <!-- <span class="kataya">Kataya</span> -->
+        <!-- don't switch name from first to second position so that it's easier to find **nvm it needs to switch anyway 
+                <!-- <span class="kataya">Kataya</span> 
                 <tbody>
                     <tr>
                         <td>1</td>
@@ -201,7 +257,7 @@ git branch -av
                 why is this table the way it is <a href="whytable.html">page</a>
 
             </table>
-        </section>
+        </section> -->
     </main>
 
     <aside>
