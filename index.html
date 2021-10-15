@@ -40,8 +40,8 @@
                 <div class="ml">
                     <h3>New</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>change work day and getting started so it can accomidate any working strategy</li>
+                        <li>how are we gonna work: branches</li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <li>we should learn from doing this final project rather than feel it's a chore and hinderance to our
                     learning</li><br>
                 <li>
-                    load balance between idividual interest of wanting to work on this poject and other things
+                    load balance between idividual interest of wanting to work on this project and other things
                 </li>
 
             </ol>
@@ -79,7 +79,7 @@
         </section>
         <section>
             <h2>How are we gonna work?</h2>
-            <h3>Froject</h3>
+            <h3>Project</h3>
             Any project can be devided into tasks. Watch this <a href="https://youtu.be/Qvmp4F-hOKA">Video</a> to get an
             idea.
             <h3>aranging work loads</h3>
@@ -115,13 +115,20 @@
             </ul>
             <hr><br>-->
             <h3>branches</h3>
-            there will be 4 primary branches.
+            there will be 2 primary branches.
             <ul>
                 <li>main</li>
-                <li>model</li>
-                <li>view</li>
-                <li>control</li>
+                <li>dev</li>
             </ul>
+            <h4>steps</h4>
+            <ol>
+                <li>fetch changes "git fetch"</li>
+                <li>branch from dev a new local feature branch</li>
+                <li>work on local feature branch. commit push to a new remote feature branch(you're gonna create it check commands below)</li>
+                <li>make a pull request on the dev from the new feature branch</li> 
+                <li>it ill be reviewed and accepted by other teamates</li>
+            </ol>
+            <img width="100%" src="./assets/Simplified-version-of-the-gitflow-branching-model-adapted-from-8.png" alt="git-branches">
 
         </section>
         <section id='commands'>
@@ -136,39 +143,40 @@ git remote -v
 git branch -av
 </code></pre>
             <h4>getting the remote repo on pc</h4>
-            cloning doesn't download every branch. just the main 
-            <pre><code>git clone repo_link</code></pre>
-
-            <h4>making a local branch from a remote branch (need verifying)</h4>
             use this command before or after steps so you can see progress
             <pre><code>git branch -av</code></pre>
+            <h4>making a local branch from a remote branch (need verifying)</h4>
+            <ol>
+                <li>
+                    cloning doesn't download every branch. just the main
+                    <pre><code>git clone repo_link</code></pre>
+                </li>
+                <li>
+                    update the local list of remote branches
+                    <pre><code>git remote update origin --prune</code></pre>
+                </li>
+                <li>
+                    check if there is a remote(should be there)
+                    <pre><code>git remote -v</code></pre>
+                </li>
+                <li>
+                    if no remote exists add remote
+                    <pre><code>git remote add origin remote_link</code></pre>
+                </li>
+                <li>
+                    fetch the changes of the remote branches
+                    pulling remote branch (origin is the remote repo alias)
+                    <pre><code>git fetch origin</code></pre>
+                </li>
 
-            update the local list of remote branches
-            <pre><code>git remote update origin --prune</code></pre>
-
-            creating branch
-            <pre><code>git branch new_local_branch_name</code></pre>
-
-            switching to branch
-            <pre><code>git switch new_local_branch_name</code></pre>
-            
-            check if there is a remote(should be there)
-            <pre><code>git remote -v</code></pre>
-
-            if no remote exists add remote
-            <pre><code>git remote add origin remote_link</code></pre>
-
-            pulling remote branch (origin is the remote repo alias)
-            <pre><code>git fetch origin</code></pre>
-
-            
-
+            </ol>
+            <h3>making a local branch from remote dev branch </h3>
 
 
         </section>
 
         <section>
-            <h2>Work day steps</h2>
+            <h2>Work day steps (not complete)</h2>
 
             <ul>
                 <li>each group will pull the assigned branch on that day (git pull [branch])</li>
@@ -182,11 +190,23 @@ git branch -av
                     OTHER
                     TEAMMATES BEFORE USE))</li>
             </ul>
+
+            or
+            <li>
+                creating a new local branch
+                <pre><code>git branch new_local_branch_name</code></pre>
+            </li>
+            <li>
+                switching to the new local branch
+                <pre><code>git switch new_local_branch_name</code></pre>
+            </li>
+
             <!-- 
             the groups will be shuffled each working day, why? so that we get to work with more people, learn & get
             exposed
             to coding techniques from each person. -->
         </section>
+
         <!-- <section id='tables'>
             <h2>Schedual</h2>
             <table>

@@ -25,14 +25,15 @@ html{
 body{
     display: flex;
     justify-content: center;
-    padding: 30px 0;
+    padding: 1em;
+    gap: 1em;
     margin: 0;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgb(186, 174, 238) 8%, rgba(148,187,233,1) 100%);
 
 }
 main{
-    padding: 5vw 0;
+    /* padding: 5vw 0; */
     max-width: 900px;
     display: flex;
     flex-direction: column;
@@ -43,6 +44,7 @@ section{
         padding: 1.5em 5vw;
         /* background-image: linear-gradient(to bottom, #ffffff, #eeeeee); */
         box-shadow: 3px 2px 5px 3px #32323255;
+        border-radius: 1em;
 
     }
 
@@ -70,13 +72,11 @@ section{
             border: 1px solid black;
             /* border-radius: 10% / 50%; */
         }
-aside{
-    padding: 1em;
-}
-    
+
     nav{
 
         margin-top: 5rem;
+        border-radius: 1em;
         padding: 1em 2em 2em 1em;
         position: sticky;
         top: 2rem;
@@ -113,7 +113,7 @@ aside{
         color: #e5e5e5;
     }
 
-@media (max-width: 746px) {
+@media only screen and (max-width: 746px) {
 
     body{
         padding: 0;
@@ -122,6 +122,7 @@ aside{
     }
     
     main{
+        margin: 1em;
         max-width: 100%;
         padding: 0;
 
@@ -132,7 +133,7 @@ aside{
     aside{
         position: sticky;
         bottom: 0;
-        padding: 0;
+
     }
         nav{
             /* height: 3rem; */
@@ -141,6 +142,7 @@ aside{
             width: 100%;
             display: flex;
             justify-content: flex-end;
+            border-radius: 0;
         }
             nav ul{
                 position: absolute;
@@ -185,7 +187,7 @@ aside{
 
 }
 
-@media print{
+@media only print{
     body{
         display: block;
         padding: 0;
